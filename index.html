@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPWIJARUN2026 - Registrasi & Tiketing Marathon Terbesar</title>
+    <!-- Google Fonts: Space Grotesk & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper">
+            <a href="#" class="nav-logo" id="navLogo">
+                <span class="logo-accent">IPWIJA</span>RUN2026
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-item active" id="navBtnHome">Beranda</a>
+                <a href="#kategori" class="nav-item" id="navBtnKategori">Kategori Tiket</a>
+                <a href="#jadwal-rute" class="nav-item" id="navBtnJadwal">Jadwal & Rute</a>
+                <a href="#faq" class="nav-item" id="navBtnFaq">Info Event</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-outline" id="btnOpenMyTickets">
+                    <i data-lucide="ticket"></i>
+                    <span>Tiket Saya</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="main-content">
+
+        <!-- LANDING SCREEN -->
+        <div id="landingScreen" class="screen-view">
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero-section">
+                <div class="hero-bg-overlay"></div>
+                <div class="hero-container">
+                    <div class="hero-badge animate-fade-in">
+                        <span class="pulse-dot"></span>
+                        MARATHON EVENT OF THE YEAR
+                    </div>
+                    <h1 class="hero-title animate-slide-up">
+                        TEMBUS BATAS DIRIMU DI <span class="gradient-text text-run">IPWIJARUN2026</span>
+                    </h1>
+                    <p class="hero-subtitle animate-slide-up-delay">
+                        Bergabunglah bersama 10.000+ pelari dari seluruh dunia dalam ajang lari jalan raya paling bergengsi tahun ini. Pilih kategorimu, siapkan energimu, dan ukir sejarah baru!
+                    </p>
+
+                    <!-- COUNTDOWN TIMER -->
+                    <div class="countdown-wrapper animate-slide-up-delay-2" id="countdownContainer">
+                        <div class="countdown-card">
+                            <span class="countdown-num" id="countdownDays">00</span>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-card">
+                            <span class="countdown-num" id="countdownHours">00</span>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-card">
+                            <span class="countdown-num" id="countdownMinutes">00</span>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-divider">:</div>
+                        <div class="countdown-card">
+                            <span class="countdown-num" id="countdownSeconds">00</span>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta animate-slide-up-delay-3">
+                        <a href="#kategori" class="btn btn-primary btn-lg" id="heroBtnRegister">
+                            Daftar Sekarang <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#jadwal-rute" class="btn btn-secondary btn-lg" id="heroBtnRoute">
+                            Jelajahi Rute <i data-lucide="map-pin"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS SECTION -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper cyan">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">10.000+</h3>
+                            <p class="stat-label">Peserta Terdaftar</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper orange">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">Rp 150JT</h3>
+                            <p class="stat-label">Total Hadiah & Pemenang</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper purple">
+                            <i data-lucide="droplet"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">12</h3>
+                            <p class="stat-label">Water Stations & Hydration</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon-wrapper green">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label">Medical Safety Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TICKET CATEGORIES SECTION -->
+            <section id="kategori" class="kategori-section">
+                <div class="section-header">
+                    <h2 class="section-title">Pilih Kategori <span class="gradient-text text-run">Tantanganmu</span></h2>
+                    <p class="section-desc">Pilih trek yang sesuai dengan kapasitas dan target larimu. Setiap kategori didesain untuk memberikan pengalaman terbaik.</p>
+                </div>
+
+                <div class="categories-grid">
+                    <!-- CATEGORY 1: 5K -->
+                    <div class="category-card" id="card5K">
+                        <div class="card-badge bg-5k">5K FUN RUN</div>
+                        <div class="card-header">
+                            <h3 class="category-name">5K Fun Run</h3>
+                            <p class="category-target">Pemula & Santai</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="currency">Rp</span>
+                            <span class="price-val">150.000</span>
+                        </div>
+                        <div class="quota-info">
+                            <div class="quota-bar-wrapper">
+                                <div class="quota-bar bg-5k" id="quotaBar5k" style="width: 82%;"></div>
+                            </div>
+                            <div class="quota-label">
+                                <span class="quota-left" id="quotaText5k">124 Slot Tersisa</span>
+                                <span class="quota-total">dari 1000</span>
+                            </div>
+                        </div>
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check" class="text-5k"></i> Jersey Eksklusif IPWIJARUN2026</li>
+                            <li><i data-lucide="check" class="text-5k"></i> Finisher Medal Logam</li>
+                            <li><i data-lucide="check" class="text-5k"></i> Refreshment & Hydration</li>
+                            <li><i data-lucide="check" class="text-5k"></i> Standard Race Kit & Bag</li>
+                            <li class="disabled"><i data-lucide="x"></i> Timing Chip RFID Sensor</li>
+                            <li class="disabled"><i data-lucide="x"></i> Finisher T-shirt (Khusus Half Marathon)</li>
+                        </ul>
+                        <button class="btn btn-primary-5k btn-full btn-select-category" data-category="5K" id="btnSelect5K">
+                            Pilih 5K Fun Run <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CATEGORY 2: 10K -->
+                    <div class="category-card popular" id="card10K">
+                        <div class="popular-ribbon"><i data-lucide="zap"></i> PALING POPULER</div>
+                        <div class="card-badge bg-10k">10K POWER RUN</div>
+                        <div class="card-header">
+                            <h3 class="category-name">10K Power Run</h3>
+                            <p class="category-target">Pelari Menengah & Pengejar Waktu</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="currency">Rp</span>
+                            <span class="price-val">250.000</span>
+                        </div>
+                        <div class="quota-info">
+                            <div class="quota-bar-wrapper">
+                                <div class="quota-bar bg-10k" id="quotaBar10k" style="width: 91%;"></div>
+                            </div>
+                            <div class="quota-label">
+                                <span class="quota-left" id="quotaText10k">45 Slot Tersisa</span>
+                                <span class="quota-total">dari 800</span>
+                            </div>
+                        </div>
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check" class="text-10k"></i> Premium Jersey IPWIJARUN2026</li>
+                            <li><i data-lucide="check" class="text-10k"></i> Timing Chip RFID Sensor</li>
+                            <li><i data-lucide="check" class="text-10k"></i> Finisher Medal Logam Premium</li>
+                            <li><i data-lucide="check" class="text-10k"></i> Hydration & Energy Gel</li>
+                            <li><i data-lucide="check" class="text-10k"></i> Premium Race Kit Box</li>
+                            <li class="disabled"><i data-lucide="x"></i> Finisher T-shirt (Khusus Half Marathon)</li>
+                        </ul>
+                        <button class="btn btn-primary-10k btn-full btn-select-category" data-category="10K" id="btnSelect10K">
+                            Pilih 10K Power Run <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- CATEGORY 3: 21K -->
+                    <div class="category-card" id="card21K">
+                        <div class="card-badge bg-21k">21K HALF MARATHON</div>
+                        <div class="card-header">
+                            <h3 class="category-name">21K Half Marathon</h3>
+                            <p class="category-target">Pelari Profesional / Elite</p>
+                        </div>
+                        <div class="card-price">
+                            <span class="currency">Rp</span>
+                            <span class="price-val">400.000</span>
+                        </div>
+                        <div class="quota-info">
+                            <div class="quota-bar-wrapper">
+                                <div class="quota-bar bg-21k" id="quotaBar21k" style="width: 74%;"></div>
+                            </div>
+                            <div class="quota-label">
+                                <span class="quota-left" id="quotaText21k">106 Slot Tersisa</span>
+                                <span class="quota-total">dari 500</span>
+                            </div>
+                        </div>
+                        <ul class="benefit-list">
+                            <li><i data-lucide="check" class="text-21k"></i> Elite Jersey IPWIJARUN2026</li>
+                            <li><i data-lucide="check" class="text-21k"></i> Timing Chip RFID Sensor</li>
+                            <li><i data-lucide="check" class="text-21k"></i> Exclusive Finisher T-shirt</li>
+                            <li><i data-lucide="check" class="text-21k"></i> Finisher Medal Logam Berukir</li>
+                            <li><i data-lucide="check" class="text-21k"></i> Premium Energy Pack & Drink</li>
+                            <li><i data-lucide="check" class="text-21k"></i> VIP Lounge Access & F&B</li>
+                        </ul>
+                        <button class="btn btn-primary-21k btn-full btn-select-category" data-category="21K" id="btnSelect21K">
+                            Pilih 21K Half Marathon <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROUTE & SCHEDULE SECTION -->
+            <section id="jadwal-rute" class="schedule-route-section">
+                <div class="section-header">
+                    <h2 class="section-title">Jadwal & <span class="gradient-text text-run">Rute Lari</span></h2>
+                    <p class="section-desc">Pahami garis start, pos hidrasi, dan susunan acara untuk persiapan matang Anda di hari H.</p>
+                </div>
+
+                <div class="grid-2-col">
+                    <!-- Schedule Info -->
+                    <div class="schedule-card glass-panel">
+                        <div class="panel-header">
+                            <i data-lucide="calendar" class="icon-accent"></i>
+                            <h3>Jadwal Acara - 25 Oktober 2026</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-time">04:30 WIB</div>
+                                <div class="timeline-content">
+                                    <h4>Open Gate & Runner Assembly</h4>
+                                    <p>Pemeriksaan keamanan, penitipan barang, dan pemanasan bersama di Plaza Timur GBK (Start utama).</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">05:00 WIB</div>
+                                <div class="timeline-content">
+                                    <h4>Flag-off 21K Half Marathon</h4>
+                                    <p>Pelepasan pelari 21K di garis start Plaza Timur GBK. Batas waktu (Cut-off Time): 4 jam.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">05:45 WIB</div>
+                                <div class="timeline-content">
+                                    <h4>Flag-off 10K Power Run</h4>
+                                    <p>Pelepasan pelari 10K di Plaza Tenggara GBK. Batas waktu (Cut-off Time): 2 jam.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">06:15 WIB</div>
+                                <div class="timeline-content">
+                                    <h4>Flag-off 5K Fun Run</h4>
+                                    <p>Pelepasan pelari rekreasi & keluarga 5K di Plaza Timur GBK. Batas waktu: 1 jam 15 menit.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-time">09:00 WIB</div>
+                                <div class="timeline-content">
+                                    <h4>Awarding & Entertainment</h4>
+                                    <p>Pengumuman pemenang podium, pembagian doorprize, dan pertunjukan musik penutup.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Route Visualizer -->
+                    <div class="route-card glass-panel">
+                        <div class="panel-header">
+                            <i data-lucide="map" class="icon-accent"></i>
+                            <h3>Visualisasi Peta Rute</h3>
+                        </div>
+                        <div class="route-selector">
+                            <button class="route-btn active" data-route="5k" id="btnRoute5k">Rute 5K</button>
+                            <button class="route-btn" data-route="10k" id="btnRoute10k">Rute 10K</button>
+                            <button class="route-btn" data-route="21k" id="btnRoute21k">Rute 21K</button>
+                        </div>
+                        <!-- Canvas / SVG Route Graphic Mockup -->
+                        <div class="route-visual-container">
+                            <div class="route-map" id="routeMap5k">
+                                <svg viewBox="0 0 400 250" class="svg-map">
+                                    <!-- Background grid -->
+                                    <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                                    <!-- GBK Outer Roads (gray lines) -->
+                                    <rect x="60" y="30" width="280" height="180" rx="40" stroke="rgba(255,255,255,0.08)" stroke-width="4" fill="none" />
+                                    <line x1="60" y1="120" x2="340" y2="120" stroke="rgba(255,255,255,0.05)" stroke-width="3" />
+                                    <!-- SUGBK Stadium Oval Center -->
+                                    <ellipse cx="200" cy="120" rx="50" ry="35" stroke="rgba(255,255,255,0.15)" stroke-width="3" fill="rgba(255,255,255,0.02)" />
+                                    <text x="175" y="123" fill="rgba(255,255,255,0.3)" font-size="10" font-family="Space Grotesk" font-weight="bold">SUGBK</text>
+                                    <!-- 5K route (Cyan) - Loops SUGBK Ring Road -->
+                                    <ellipse cx="200" cy="120" rx="70" ry="50" stroke="#00f2fe" stroke-width="6" stroke-linecap="round" fill="none" class="animate-dash" />
+                                    <!-- Start / Finish markers (Plaza Timur) -->
+                                    <circle cx="270" cy="120" r="8" fill="#22c55e" />
+                                    <text x="282" y="124" fill="#22c55e" font-size="9" font-family="Space Grotesk" font-weight="bold">START/FINISH</text>
+                                    <!-- Water stations markers -->
+                                    <circle cx="130" cy="120" r="5" fill="#00ffff" />
+                                    <text x="105" y="110" fill="#00ffff" font-size="8" font-family="Outfit">WS 1 (Plaza Barat)</text>
+                                </svg>
+                                <div class="route-details">
+                                    <div class="detail-pill"><i data-lucide="navigation"></i> <span>Rute: SUGBK Inner Ring Loop</span></div>
+                                    <div class="detail-pill"><i data-lucide="droplet"></i> <span>2 Water Station</span></div>
+                                    <div class="detail-pill"><i data-lucide="mountain"></i> <span>Elevasi: +5m</span></div>
+                                </div>
+                            </div>
+                            <div class="route-map hidden" id="routeMap10k">
+                                <svg viewBox="0 0 400 250" class="svg-map">
+                                    <!-- Background grid -->
+                                    <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                                    <!-- GBK Complex Outer Roads -->
+                                    <ellipse cx="140" cy="130" rx="70" ry="50" stroke="rgba(255,255,255,0.08)" stroke-width="4" fill="none" />
+                                    <!-- Sudirman Road (right side vertical line) -->
+                                    <line x1="300" y1="20" x2="300" y2="230" stroke="rgba(255,255,255,0.12)" stroke-width="6" />
+                                    <text x="310" y="40" fill="rgba(255,255,255,0.2)" font-size="8" font-family="Space Grotesk" transform="rotate(90, 310, 40)">Jl. Jend. Sudirman</text>
+                                    <!-- 10K Route (Orange) - GBK to Sudirman/Semanggi loop and back -->
+                                    <path d="M 140,180 L 230,180 A 15,15 0 0,0 245,165 L 245,130 L 300,130 L 300,60 A 20,20 0 0,0 280,40 L 280,100 L 245,100 L 245,80 A 15,15 0 0,0 230,65 L 140,65 A 65,65 0 0,0 140,180 Z" stroke="#ff6b00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" class="animate-dash" />
+                                    <!-- Start / Finish markers (Plaza Tenggara) -->
+                                    <circle cx="140" cy="180" r="8" fill="#22c55e" />
+                                    <text x="110" y="200" fill="#22c55e" font-size="9" font-family="Space Grotesk" font-weight="bold">START/FINISH</text>
+                                    <!-- Water stations and Medical markers -->
+                                    <circle cx="300" cy="100" r="5" fill="#00ffff" />
+                                    <circle cx="140" cy="65" r="5" fill="#00ffff" />
+                                    <circle cx="280" cy="40" r="5" fill="#ff4d4d" />
+                                    <text x="245" y="32" fill="#ff4d4d" font-size="8" font-family="Outfit">Pos Medis Semanggi</text>
+                                </svg>
+                                <div class="route-details">
+                                    <div class="detail-pill"><i data-lucide="navigation"></i> <span>Rute: GBK Loop - Sudirman - Semanggi</span></div>
+                                    <div class="detail-pill"><i data-lucide="droplet"></i> <span>4 Water Station</span></div>
+                                    <div class="detail-pill"><i data-lucide="mountain"></i> <span>Elevasi: +12m</span></div>
+                                </div>
+                            </div>
+                            <div class="route-map hidden" id="routeMap21k">
+                                <svg viewBox="0 0 400 250" class="svg-map">
+                                    <!-- Background grid -->
+                                    <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                                    <!-- GBK Complex Oval (left bottom area) -->
+                                    <ellipse cx="100" cy="180" rx="50" ry="35" stroke="rgba(255,255,255,0.06)" stroke-width="4" fill="none" />
+                                    <!-- Long Sudirman-Thamrin highway (Right side vertical) -->
+                                    <line x1="260" y1="10" x2="260" y2="240" stroke="rgba(255,255,255,0.12)" stroke-width="6" />
+                                    <!-- Bundaran HI Circle (Top Right) -->
+                                    <circle cx="260" cy="40" r="20" stroke="rgba(255,255,255,0.15)" stroke-width="4" fill="none" />
+                                    <text x="290" y="45" fill="rgba(255,255,255,0.3)" font-size="8" font-family="Space Grotesk">Bundaran HI</text>
+                                    <!-- 21K Route (Purple) - Plaza Timur -> Sudirman -> Bundaran HI Loop -> Senayan -> GBK -->
+                                    <path d="M 100,145 L 200,145 L 260,145 L 260,60 A 20,20 0 1,0 240,40 L 240,210 L 260,210 L 260,180 L 150,180 A 50,30 0 1,1 100,145 Z" stroke="#a855f7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" class="animate-dash" />
+                                    <!-- Start / Finish markers (Plaza Timur) -->
+                                    <circle cx="100" cy="145" r="8" fill="#22c55e" />
+                                    <text x="65" y="132" fill="#22c55e" font-size="9" font-family="Space Grotesk" font-weight="bold">START/FINISH</text>
+                                    <!-- Markers -->
+                                    <circle cx="240" cy="40" r="5" fill="#00ffff" />
+                                    <circle cx="240" cy="145" r="5" fill="#ff4d4d" />
+                                    <circle cx="100" cy="210" r="5" fill="#00ffff" />
+                                </svg>
+                                <div class="route-details">
+                                    <div class="detail-pill"><i data-lucide="navigation"></i> <span>Rute: Sudirman-Thamrin (Bundaran HI) Loop & GBK</span></div>
+                                    <div class="detail-pill"><i data-lucide="droplet"></i> <span>8 Water Station</span></div>
+                                    <div class="detail-pill"><i data-lucide="mountain"></i> <span>Elevasi: +22m</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section id="faq" class="faq-section">
+                <div class="section-header">
+                    <h2 class="section-title">Informasi <span class="gradient-text text-run">Event</span></h2>
+                    <p class="section-desc">Jawaban singkat untuk pertanyaan-pertanyaan umum seputar IPWIJARUN2026.</p>
+                </div>
+                <div class="faq-accordion-container">
+                    <div class="faq-item" id="faq1">
+                        <button class="faq-question">
+                            <span>Kapan dan di mana pengambilan Race Pack (Race Kit) dilakukan?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pengambilan Race Pack (RPC) akan diselenggarakan pada tanggal 22-24 Oktober 2026 di Jakarta Convention Center (JCC) Hall B, mulai pukul 10:00 hingga 20:00 WIB. Harap membawa E-Ticket dan kartu identitas resmi Anda.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq2">
+                        <button class="faq-question">
+                            <span>Apakah slot tiket saya dapat dipindahtangankan ke orang lain?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tidak, tiket yang sudah dibeli bersifat personal dan terikat dengan nomor identitas serta data medis Anda demi keselamatan selama di trek lari. Pemindahtanganan tiket tanpa konfirmasi penyelenggara dilarang keras.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq3">
+                        <button class="faq-question">
+                            <span>Apakah ada batasan usia untuk pendaftaran peserta?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Untuk kategori 5K minimal berusia 10 tahun (dengan pendampingan orang tua), 10K minimal berusia 15 tahun, dan 21K Half Marathon minimal berusia 17 tahun ke atas pada saat hari H perlombaan.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" id="faq4">
+                        <button class="faq-question">
+                            <span>Apa yang didapat jika saya menyelesaikan perlombaan di luar Cut-Off Time (COT)?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Semua pelari yang melewati garis finish tetap mendapatkan hidrasi dan penanganan medis. Namun, Finisher Medal eksklusif hanya diberikan bagi pelari yang menyelesaikan rute di dalam rentang waktu Cut-Off Time yang telah ditentukan.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MY TICKETS SCREEN -->
+        <div id="myTicketsScreen" class="screen-view hidden">
+            <section class="my-tickets-section">
+                <div class="dashboard-header">
+                    <button class="btn btn-icon-only btn-back" id="btnBackToHome">
+                        <i data-lucide="arrow-left"></i>
+                    </button>
+                    <div>
+                        <h2 class="section-title">Dashboard <span class="gradient-text text-run">Tiket Saya</span></h2>
+                        <p class="section-desc">Daftar registrasi marathon IPWIJARUN2026 yang aktif atas nama Anda.</p>
+                    </div>
+                </div>
+
+                <!-- TICKET LOGIN ACCESS PANEL -->
+                <div class="ticket-login-container glass-panel" id="ticketLoginContainer" style="max-width: 480px; margin: 40px auto; padding: 30px; border-radius: 16px; text-align: center;">
+                    <div style="margin-bottom: 20px;">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(168, 85, 247, 0.1); color: #a855f7; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                            <i data-lucide="key-round" style="width: 30px; height: 30px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #ffffff; margin-bottom: 8px;">Akses Tiket Anda</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-text-muted);">Masukkan Nomor BIB atau ID Tiket Anda untuk masuk dan melihat rincian tiket lari Anda.</p>
+                    </div>
+
+                    <form id="ticketLoginForm" onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 15px;">
+                        <div class="form-group" style="text-align: left; display: flex; flex-direction: column; gap: 6px;">
+                            <label for="inputLoginBib" style="font-size: 0.9rem; font-weight: 600; color: #ffffff;">Nomor BIB / ID Tiket <span class="required" style="color: var(--color-red);">*</span></label>
+                            <input type="text" id="inputLoginBib" required placeholder="Contoh: R26-10-8432 atau T26-10-12345" style="width: 100%; text-transform: uppercase; padding: 12px; background: rgba(255, 255, 255, 0.05); border: 1px fill rgba(255,255,255,0.1); border-radius: 8px; color:#ffffff; font-family: var(--font-body);">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btnSubmitTicketLogin" style="width: 100%; padding: 12px; border:none; border-radius:8px; font-weight:600; font-family: var(--font-heading); background: linear-gradient(135deg, var(--color-purple), #c084fc); color:#ffffff; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px;">
+                            <span>Masuk & Lihat Tiket</span>
+                            <i data-lucide="log-in" style="width: 16px; height: 16px;"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- THE DASHBOARD CONTENT (Hidden until login) -->
+                <div id="ticketDashboardContainer" class="hidden">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 12px; background: rgba(255, 255, 255, 0.03); border-radius: 8px;">
+                        <span style="font-size: 0.95rem; color: var(--color-text-muted);">Masuk sebagai: <strong id="loggedInUserBib" style="color: #ffffff;">BIB: R26-XX-XXXX</strong></span>
+                        <button class="btn btn-outline" id="btnTicketLogout" style="padding: 6px 12px; font-size: 0.85rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; background:transparent; color:#ffffff; cursor:pointer; display:flex; align-items:center; gap:6px;">
+                            <i data-lucide="log-out" style="width: 14px; height: 14px;"></i> Keluar
+                        </button>
+                    </div>
+
+                    <!-- SEARCH & FILTER TOOLBAR -->
+                    <div class="toolbar-panel glass-panel">
+                        <div class="search-box">
+                            <i data-lucide="search" class="search-icon"></i>
+                            <input type="text" id="ticketSearchInput" placeholder="Cari nama peserta atau nomor tiket...">
+                        </div>
+                        <div class="filter-group">
+                            <button class="filter-btn active" data-filter="all" id="btnFilterAll">Semua Kategori</button>
+                            <button class="filter-btn" data-filter="5K" id="btnFilter5k">5K</button>
+                            <button class="filter-btn" data-filter="10K" id="btnFilter10k">10K</button>
+                            <button class="filter-btn" data-filter="21K" id="btnFilter21k">21K</button>
+                        </div>
+                    </div>
+
+                    <!-- TICKETS GRID CONTAINER -->
+                    <div class="tickets-grid" id="ticketsGrid">
+                        <!-- Dynamic ticket cards will be inserted here by JavaScript -->
+                        <div class="empty-state" id="ticketsEmptyState">
+                            <i data-lucide="ticket" class="empty-icon"></i>
+                            <h3>Belum Ada Tiket yang Dipesan</h3>
+                            <p>Anda belum memesan tiket kategori apa pun untuk IPWIJARUN2026. Pilih kategori Anda sekarang dan mulailah bersiap!</p>
+                            <button class="btn btn-primary" id="btnGoToShop">Beli Tiket Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <span class="logo-accent">IPWIJA</span>RUN2026
+                </a>
+                <p class="footer-text">Menciptakan ekosistem marathon yang sehat, kompetitif, dan tak terlupakan untuk menembus batas potensimu.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="social-icon"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="social-icon"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="social-icon"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h4>Navigasi Cepat</h4>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#kategori">Kategori Lari</a></li>
+                    <li><a href="#jadwal-rute">Jadwal & Peta Rute</a></li>
+                    <li><a href="#faq">Pertanyaan Umum</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Dukungan Medis & Mitra</h4>
+                <ul>
+                    <li><a href="#">Mitra Hydration resmi</a></li>
+                    <li><a href="#">Layanan Medis Darurat</a></li>
+                    <li><a href="#">Sponsor Utama</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IPWIJARUN2026 Marathon Championship. All Rights Reserved. Made for Runners.</p>
+        </div>
+    </footer>
+
+    <!-- REGISTRATION MODAL (CHECKOUT MULTI-STEP) -->
+    <div class="modal-overlay hidden" id="checkoutModal">
+        <div class="modal-card glass-panel animate-zoom-in">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-category-badge" id="modalCategoryBadge">5K</div>
+                <div class="modal-title-group">
+                    <h3 id="modalTitle">Pendaftaran IPWIJARUN2026</h3>
+                    <p class="modal-subtitle" id="modalSubtitle">Lengkapi pendaftaran kategori 5K Fun Run</p>
+                </div>
+                <button class="btn-close-modal" id="btnCloseCheckoutModal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+
+            <!-- Progress Bar Step -->
+            <div class="step-progress-wrapper">
+                <div class="progress-line">
+                    <div class="progress-line-fill" id="stepProgressFill"></div>
+                </div>
+                <div class="step-nodes">
+                    <div class="step-node active" id="stepNode1">
+                        <span class="step-idx">1</span>
+                        <span class="step-txt">Data Diri</span>
+                    </div>
+                    <div class="step-node" id="stepNode2">
+                        <span class="step-idx">2</span>
+                        <span class="step-txt">Pilihan Tambahan</span>
+                    </div>
+                    <div class="step-node" id="stepNode3">
+                        <span class="step-idx">3</span>
+                        <span class="step-txt">Pembayaran</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Content Form -->
+            <div class="modal-body">
+                <form id="checkoutForm" autocomplete="off" onsubmit="event.preventDefault();">
+                    
+                    <!-- STEP 1: PERSONAL DATA -->
+                    <div class="form-step-section" id="formStep1">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="inputFullName">Nama Lengkap (Sesuai KTP) <span class="required">*</span></label>
+                                <input type="text" id="inputFullName" required placeholder="Masukkan nama lengkap Anda">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Alamat Email <span class="required">*</span></label>
+                                <input type="email" id="inputEmail" required placeholder="name@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPhone">Nomor WhatsApp <span class="required">*</span></label>
+                                <input type="tel" id="inputPhone" required placeholder="Contoh: 081234567890">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBirthDate">Tanggal Lahir <span class="required">*</span></label>
+                                <input type="date" id="inputBirthDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputJerseySize">Ukuran Jersey Lari <span class="required">*</span></label>
+                                <select id="inputJerseySize" required>
+                                    <option value="" disabled selected>Pilih Ukuran Jersey</option>
+                                    <option value="XS">XS (Lebar Dada 44cm)</option>
+                                    <option value="S">S (Lebar Dada 47cm)</option>
+                                    <option value="M">M (Lebar Dada 50cm)</option>
+                                    <option value="L">L (Lebar Dada 53cm)</option>
+                                    <option value="XL">XL (Lebar Dada 56cm)</option>
+                                    <option value="XXL">XXL (Lebar Dada 59cm)</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="inputEmergencyPhone">Kontak Darurat (Nama & Hubungan - No Telepon) <span class="required">*</span></label>
+                                <input type="text" id="inputEmergencyPhone" required placeholder="Contoh: Ayah - Budi (0811223344)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: ADD-ONS & SUMMARY -->
+                    <div class="form-step-section hidden" id="formStep2">
+                        <h4 class="addon-title">Layanan Tambahan (Opsional)</h4>
+                        
+                        <!-- Addon 1: Engrave Name -->
+                        <div class="addon-option-card" id="addonMedalCard">
+                            <div class="addon-checkbox-wrapper">
+                                <input type="checkbox" id="chkAddonMedal" class="addon-checkbox">
+                                <div class="addon-details">
+                                    <span class="addon-name">Ukir Nama Kustom pada Medali</span>
+                                    <span class="addon-desc">Ukir nama eksklusif Anda di bagian belakang medali finisher logam.</span>
+                                </div>
+                            </div>
+                            <div class="addon-price">+ Rp 30.000</div>
+                        </div>
+
+                        <!-- Addon 1 Details (shown only if checked) -->
+                        <div class="addon-field hidden" id="groupMedalName">
+                            <label for="inputMedalName">Nama di Medali (Maks. 12 karakter)</label>
+                            <input type="text" id="inputMedalName" maxlength="12" placeholder="Nama panggilan Anda">
+                        </div>
+
+                         <!-- Price Summary -->
+                        <div class="price-summary-panel">
+                            <h5>Rincian Pembayaran</h5>
+                            <div class="summary-row">
+                                <span id="summaryCategoryText">Tiket 5K Fun Run</span>
+                                <span id="summaryBasePrice">Rp 150.000</span>
+                            </div>
+                            <div class="summary-row hidden" id="rowAddonMedal">
+                                <span>Ukir Nama Medali</span>
+                                <span>Rp 30.000</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="summary-row total">
+                                <span>Total Pembayaran</span>
+                                <span class="total-price" id="summaryTotalPrice">Rp 150.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: PAYMENT SIMULATION -->
+                    <div class="form-step-section hidden" id="formStep3">
+                        <h4 class="addon-title">Pilih Metode Pembayaran</h4>
+                        <div class="payment-methods-grid">
+                            <div class="payment-method-card active" data-method="qris" id="payQris">
+                                <i data-lucide="qr-code" class="payment-icon text-green"></i>
+                                <span>QRIS (Gopay/OVO/ShopeePay)</span>
+                            </div>
+                            <div class="payment-method-card" data-method="va" id="payVa">
+                                <i data-lucide="landmark" class="payment-icon text-blue"></i>
+                                <span>Virtual Account BCA/Mandiri</span>
+                            </div>
+                            <div class="payment-method-card" data-method="cc" id="payCc">
+                                <i data-lucide="credit-card" class="payment-icon text-purple"></i>
+                                <span>Kartu Kredit / Debit</span>
+                            </div>
+                        </div>
+
+                        <!-- Dynamic Payment Details Box -->
+                        <div class="payment-details-box glass-panel" id="paymentDetailsContainer">
+                            <!-- QRIS Area -->
+                            <div class="payment-sub-detail" id="detailQris">
+                                <div class="qris-layout">
+                                    <div class="qris-qr-code">
+                                        <!-- Real QR code using QR server API or dynamic placeholder styled beautifully -->
+                                        <div class="qr-canvas-mock" id="qrisQrCodeImage">
+                                            <!-- QR image dynamically generated or preloaded styled mock -->
+                                            <div class="qr-scan-line"></div>
+                                        </div>
+                                    </div>
+                                    <div class="qris-instructions">
+                                        <p class="instructions-title">Scan Kode QR untuk Membayar</p>
+                                        <ol>
+                                            <li>Buka aplikasi dompet digital atau mobile banking Anda.</li>
+                                            <li>Pilih menu <strong>Pindai / Scan QRIS</strong>.</li>
+                                            <li>Arahkan kamera ke kode QR di samping.</li>
+                                            <li>Periksa jumlah nominal pembayaran dan selesaikan transaksi.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- VA Area -->
+                            <div class="payment-sub-detail hidden" id="detailVa">
+                                <div class="va-layout">
+                                    <div class="va-info-block">
+                                        <span class="va-label">Bank Penerima</span>
+                                        <span class="va-value">BCA (Virtual Account)</span>
+                                    </div>
+                                    <div class="va-info-block">
+                                        <span class="va-label">Nomor Virtual Account</span>
+                                        <div class="va-number-wrapper">
+                                            <span class="va-number" id="vaNumber">8830 1827 9920 4022</span>
+                                            <button class="btn-copy" id="btnCopyVa"><i data-lucide="copy"></i> Salin</button>
+                                        </div>
+                                    </div>
+                                    <div class="va-info-block">
+                                        <span class="va-label">Nama Akun</span>
+                                        <span class="va-value">IPWIJARUN2026 MARATHON REGISTRATION</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CC Area -->
+                            <div class="payment-sub-detail hidden" id="detailCc">
+                                <div class="cc-layout">
+                                    <div class="form-group full-width">
+                                        <label for="ccNum">Nomor Kartu Kredit</label>
+                                        <input type="text" id="ccNum" placeholder="4111 2222 3333 4444" maxlength="19">
+                                    </div>
+                                    <div class="form-group-row">
+                                        <div class="form-group">
+                                            <label for="ccExpiry">Masa Berlaku</label>
+                                            <input type="text" id="ccExpiry" placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ccCvv">CVV</label>
+                                            <input type="password" id="ccCvv" placeholder="123" maxlength="3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Info Simulation warning -->
+                        <div class="simulation-alert-box">
+                            <i data-lucide="info" class="alert-icon"></i>
+                            <p><strong>Simulasi Pembayaran:</strong> Ini adalah lingkungan demo. Klik tombol "Konfirmasi Pembayaran" di bawah untuk mensimulasikan pelunasan instan dan mendapatkan E-Ticket secara langsung.</p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Modal Footer Controls -->
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btnStepPrev" disabled> Kembali</button>
+                <button class="btn btn-primary" id="btnStepNext">Lanjut <i data-lucide="arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- E-TICKET VIEW MODAL (SHOWN AFTER REGISTRATION SUCCESS OR FROM LIST) -->
+    <div class="modal-overlay hidden" id="ticketModal">
+        <div class="ticket-modal-card animate-zoom-in">
+            <button class="btn-close-modal text-white" id="btnCloseTicketModal">
+                <i data-lucide="x"></i>
+            </button>
+            
+            <!-- THE DYNAMIC PHYSICAL TICKET BODY -->
+            <div class="ticket-wrapper" id="ticketPrintArea">
+                <!-- Ticket Left/Top Side -->
+                <div class="ticket-main" id="ticketHeaderTheme">
+                    <div class="ticket-noise"></div>
+                    <div class="ticket-top-row">
+                        <div class="ticket-logo">IPWIJA<span>RUN2026</span></div>
+                        <div class="ticket-bib-number" id="ticketBib">BIB: R26-21-0238</div>
+                    </div>
+                    
+                    <div class="ticket-event-details">
+                        <div class="ticket-lbl">EVENT LARI • GBK JAKARTA</div>
+                        <div class="ticket-title-text">IPWIJARUN2026 MARATHON</div>
+                        <div class="ticket-meta-grid">
+                            <div>
+                                <span class="ticket-lbl">KATEGORI</span>
+                                <span class="ticket-val" id="ticketCategory">21K Half Marathon</span>
+                            </div>
+                            <div>
+                                <span class="ticket-lbl">TANGGAL</span>
+                                <span class="ticket-val">25 Okt 2026</span>
+                            </div>
+                            <div>
+                                <span class="ticket-lbl">WAKTU START</span>
+                                <span class="ticket-val" id="ticketStartTime">05:00 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-divider-line">
+                        <div class="notch notch-left"></div>
+                        <div class="perforation-line"></div>
+                        <div class="notch notch-right"></div>
+                    </div>
+
+                    <div class="ticket-user-details">
+                        <div class="ticket-user-grid">
+                            <div>
+                                <span class="ticket-lbl">PESERTA LARI</span>
+                                <span class="ticket-val" id="ticketRunnerName">Muhammad Dafa</span>
+                            </div>
+                            <div>
+                                <span class="ticket-lbl">UKURAN JERSEY</span>
+                                <span class="ticket-val" id="ticketJerseySizeText">L</span>
+                            </div>
+                        </div>
+                        <div class="ticket-user-grid" style="margin-top: 15px;">
+                            <div>
+                                <span class="ticket-lbl">KONTAK DARURAT</span>
+                                <span class="ticket-val" id="ticketEmergencyText">Ayah - 08122334455</span>
+                            </div>
+                            <div>
+                                <span class="ticket-lbl">NAMA DI MEDALI</span>
+                                <span class="ticket-val" id="ticketMedalEngravingText">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ticket Right/Bottom Side (Stub/QR Pack) -->
+                <div class="ticket-stub">
+                    <div class="stub-info">
+                        <span class="ticket-lbl">STATUS TIKET</span>
+                        <span class="ticket-status-pill"><i data-lucide="check-circle"></i> LUNAS</span>
+                    </div>
+                    <div class="stub-qr-code">
+                        <img src="" id="ticketQrImage" alt="Ticket QR Code">
+                        <span class="qr-label">PINDAI UNTUK REGISTRASI RPC</span>
+                    </div>
+                    <div class="stub-footer">
+                        <span>ID TIKET: </span><span id="ticketIdSpan">T26-21-99882</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download & Close Action Bar -->
+            <div class="ticket-actions-bar">
+                <button class="btn btn-primary btn-lg" id="btnDownloadTicket">
+                    <i data-lucide="download"></i> Download E-Ticket (PNG)
+                </button>
+                <button class="btn btn-secondary btn-lg" id="btnShareTicket" style="background-color: #a855f7; border-color: #a855f7; color: #ffffff;">
+                    <i data-lucide="share-2"></i> Bagikan Link
+                </button>
+                <button class="btn btn-secondary btn-lg" id="btnCloseTicket">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- html2canvas and confetti library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- Main JS Application script -->
+    <script src="app.js"></script>
+</body>
+</html>

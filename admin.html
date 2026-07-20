@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPWIJARUN2026 - Admin Portal Dashboard</title>
+    <!-- Google Fonts: Space Grotesk & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Main Shared Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar-container">
+        <div class="navbar-wrapper">
+            <a href="#" class="nav-logo" id="navLogo">
+                <span class="logo-accent">IPWIJA</span>RUN2026 <span style="font-size:0.9rem; color:var(--color-text-muted); font-weight:400; margin-left:8px;">| Admin Portal</span>
+            </a>
+            <nav class="nav-links">
+                <!-- Home link redirects back to index.html -->
+                <a href="index.html" class="nav-item">Lihat Web Peserta</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="addon-badge yes" style="padding: 6px 12px; font-family: var(--font-heading);"><i data-lucide="shield-check" style="width:14px; height:14px; display:inline-block; vertical-align:middle; margin-right:4px;"></i> ADMINISTRATOR</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN APP WRAPPER -->
+    <main class="main-content">
+
+        <!-- ADMIN PANEL SCREEN -->
+        <div id="adminScreen" class="screen-view">
+            <section class="admin-section" style="margin-top: 120px;">
+                <div class="dashboard-header">
+                    <div>
+                        <h2 class="section-title">Admin <span class="gradient-text text-run">Dashboard</span></h2>
+                        <p class="section-desc">Pantau statistik pendaftaran dan kelola database registrasi peserta IPWIJARUN2026 secara terpusat.</p>
+                    </div>
+                </div>
+
+                <!-- ADMIN STATS PANEL -->
+                <div class="admin-stats-grid">
+                    <div class="admin-stat-card glass-panel">
+                        <div class="admin-stat-icon green"><i data-lucide="users"></i></div>
+                        <div class="admin-stat-info">
+                            <span class="stat-num" id="adminStatTotalRunners">0</span>
+                            <span class="stat-lbl">Total Pendaftar</span>
+                        </div>
+                    </div>
+                    <div class="admin-stat-card glass-panel">
+                        <div class="admin-stat-icon cyan"><i data-lucide="coins"></i></div>
+                        <div class="admin-stat-info">
+                            <span class="stat-num" id="adminStatTotalRevenue">Rp 0</span>
+                            <span class="stat-lbl">Total Pendapatan</span>
+                        </div>
+                    </div>
+                    <div class="admin-stat-card glass-panel">
+                        <div class="admin-stat-icon purple"><i data-lucide="award"></i></div>
+                        <div class="admin-stat-info">
+                            <span class="stat-num" id="adminStat21kCount">0</span>
+                            <span class="stat-lbl">Peserta 21K</span>
+                        </div>
+                    </div>
+                    <div class="admin-stat-card glass-panel">
+                        <div class="admin-stat-icon orange"><i data-lucide="activity"></i></div>
+                        <div class="admin-stat-info">
+                            <span class="stat-num" id="adminStat10kCount">0</span>
+                            <span class="stat-lbl">Peserta 10K / 5K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DATABASE TABLE PANEL -->
+                <div class="admin-table-panel glass-panel">
+                    <div class="table-header-toolbar">
+                        <h3>Daftar Database Peserta</h3>
+                        <div class="table-actions">
+                            <button class="btn btn-outline" id="btnExportCsv">
+                                <i data-lucide="file-spreadsheet"></i> Ekspor CSV
+                            </button>
+                            <div class="search-box table-search">
+                                <i data-lucide="search" class="search-icon"></i>
+                                <input type="text" id="adminSearchInput" placeholder="Cari nama, email, ID...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-scroll-wrapper">
+                        <table class="admin-table" id="adminTable">
+                            <thead>
+                                <tr>
+                                    <th>ID Tiket</th>
+                                    <th>BIB</th>
+                                    <th>Kategori</th>
+                                    <th>Nama Peserta</th>
+                                    <th>Ukuran Jersey</th>
+                                    <th>Ukir Medali</th>
+                                    <th>Total Bayar</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTableBody">
+                                <!-- Dynamic rows will be inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="empty-state hidden" id="adminEmptyState">
+                        <i data-lucide="database" class="empty-icon"></i>
+                        <h3>Database Kosong</h3>
+                        <p>Belum ada data pendaftar yang masuk ke database. Registrasi peserta baru akan muncul di sini secara otomatis.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-container">
+        <div class="footer-wrapper">
+            <div class="footer-brand">
+                <a href="#" class="nav-logo">
+                    <span class="logo-accent">IPWIJA</span>RUN2026
+                </a>
+                <p class="footer-text">Layanan monitoring administrasi pendaftaran marathon terintegrasi IPWIJARUN2026.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IPWIJARUN2026 Admin Portal. All Rights Reserved. Confidential Data.</p>
+        </div>
+    </footer>
+
+    <!-- Main JS Admin script -->
+    <script src="admin.js"></script>
+</body>
+</html>

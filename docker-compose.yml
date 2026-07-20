@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ipwijarun-server:
+    build: .
+    container_name: ipwijarun-app
+    ports:
+      - "3005:3000"
+    volumes:
+      # Melakukan sinkronisasi database berkas json antara Host dan Container
+      - ./database.json:/app/database.json
+    environment:
+      - DOCKER_ENV=true
+    restart: always
