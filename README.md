@@ -13,30 +13,46 @@ Tonton video demonstrasi penggunaan aplikasi di sini:
 
 ---
 
+## 👥 Anggota Kelompok
+1. **Gabriel julian pamungkir** (202401110031)
+2. **Januar rizki fauzi** (202401110023)
+3. **Moreno komara** (202401110011)
+4. **Vera astarena** (202401110014)
+5. **Afini nur rizkia** (202401110028)
+
+---
 
 ## ✨ Fitur Utama
+- [x] **Alur Pendaftaran & Konfirmasi Pembayaran** (Registrasi multi-step, pemilihan jersey, ukir medali)
+- [x] **Sistem Login & Penerbitan E-Ticket Peserta** (Menggunakan nomor BIB / ID Tiket & QR Code)
+- [x] **Dynamic Environment Detection** (Port 3000/3005 API vs LocalStorage)
+- [x] **Panel Admin: Sinkronisasi Data & Ekspor Data ke CSV** (Dashboard statistik & grafik realtime)
+- [x] **Manajemen Pembatalan Registrasi & Log Transaksi** (Fitur hapus data peserta dari database)
 
-### 1. Portal Peserta (`index.html`)
+### Detail Fungsionalitas Portal:
+#### 1. Portal Peserta (`index.html`)
 * **Registrasi Multi-Step**: Formulir pendaftaran interaktif (5K, 10K, 21K), pemilihan ukuran jersey, serta fitur tambahan (ukir nama pada medali).
 * **Simulasi Pembayaran & Penerbitan E-Ticket**: Proses checkout interaktif yang menghasilkan nomor BIB, ID Tiket unik, dan QR Code otomatis.
 * **Dashboard "Tiket Saya"**: Fitur pencarian tiket berdasarkan BIB/ID Tiket untuk melihat kembali e-ticket, serta integrasi **Web Share API** untuk membagikan tautan e-ticket secara instan.
 
-### 2. Portal Admin (`admin.html`)
+#### 2. Portal Admin (`admin.html`)
 * **Dashboard Statistik Real-Time**: Analisis total pendaftar, total pendapatan, statistik ukuran jersey, dan kuota tersisa.
 * **Kelola Database**: Cari/filter data peserta secara instan.
 * **Batal Registrasi**: Hapus pendaftar langsung dari database dengan sinkronisasi otomatis.
 * **Ekspor Data**: Fitur unduh database peserta langsung ke berkas `.csv`.
 
-### 3. Dual-Mode Dinamis (Online & Offline)
+#### 3. Dual-Mode Dinamis (Online & Offline)
 * **Online Mode (Server)**: Jika diakses melalui server lokal atau Docker (`http://localhost:3005`), aplikasi secara otomatis akan menyimpan data di server (`database.json`) melalui REST API.
 * **Offline Mode (Standalone)**: Jika file `index.html` diklik langsung via browser (`file://`), aplikasi akan berjalan sepenuhnya tanpa server dengan menggunakan **LocalStorage** & **SessionStorage**.
 
 ---
 
-## 🛠️ Persyaratan Sistem
+## 🛠️ Tech Stack & Tools
 
-* **Docker Desktop** (Sangat direkomendasikan untuk instalasi cepat)
-* **Node.js v18.x atau lebih tinggi** (Jika ingin dijalankan secara manual di lokal)
+* **Front-End / Logic**: HTML, CSS, JavaScript (ES6)
+* **Storage & Data**: LocalStorage (JSON) / REST API
+* **Database / Backend**: Node.js + Express.js (menyimpan data ke `database.json`) *(Mendukung integrasi MySQL/PHP)*
+* **Tools**: VS Code, Git, Laragon, Browser DevTools, Docker Desktop
 
 ---
 
