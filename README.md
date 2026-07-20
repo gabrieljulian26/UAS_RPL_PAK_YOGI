@@ -7,7 +7,12 @@
 
 Sistem Informasi Tiket & Manajemen Pendaftaran untuk Event Lari **IPWIJARUN 2026**. Aplikasi ini dirancang agar dapat bekerja dalam dua mode secara dinamis (**Online** berbasis Server & Docker, serta **Offline** berbasis Browser LocalStorage).
 
+## 📺 Video Demonstrasi
+Tonton video demonstrasi penggunaan aplikasi di sini:
+👉 **[Demo Video IPWIJARUN 2026 di YouTube](https://youtu.be/E4EYYVj9mEQ?si=BcOzGj5FjsV12FdA)**
+
 ---
+
 
 ## ✨ Fitur Utama
 
